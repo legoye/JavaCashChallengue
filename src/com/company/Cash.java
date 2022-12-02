@@ -21,6 +21,9 @@ public class Cash {
         boolean resultNotChange = canIGiveChange(registerStatus, 500, 100);
         System.out.println("Result " + resultNotChange);
 
+        boolean resultNotChange2 = canIGiveChange(registerStatus, 300, 50);
+        System.out.println("Result " + resultNotChange2);
+
     }
 
     public static boolean canIGiveChange(Map<Integer,Integer> registerStatus, Integer customerPayment, Integer productCost) {
@@ -101,7 +104,7 @@ public class Cash {
 
         }
 
-        if(!exist){
+        if(exist){
             return  canIGiveChange(registerStatus, change, valueMinus);
         }
 
